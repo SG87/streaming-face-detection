@@ -61,6 +61,6 @@ RUN mkdir /OpenVinoApps
 
 COPY ./OpenVinoApps/* /OpenVinoApps/
 
-EXPOSE 5000
+EXPOSE 5000 6000
 
 CMD ["python3", "/OpenVinoApps/face_detection_flask.py"]
