@@ -14,7 +14,7 @@ Application that detects faces on on a video/camera stream. Next to detection th
     
 ## Running the container
     
-    docker run -p 5000:5000 streaming-face-detection
+    docker run -p 6000:6000 streaming-face-detection
     
 ## View the app
 
