@@ -65,4 +65,4 @@ EXPOSE 5000
 
 WORKDIR /OpenVinoApps/
 
-CMD ["python", "face_detection_flask.py"]
+CMD ["python3", "face_detection_flask.py"]
