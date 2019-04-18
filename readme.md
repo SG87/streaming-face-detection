@@ -7,7 +7,7 @@ Application that detects faces on on a video/camera stream. Next to detection th
 
     git clone https://github.com/SG87/streaming-face-detection.git
     
-    cd streaming-face-detetion
+    cd streaming-face-detection
     
     docker build . -t streaming-face-detection
     
