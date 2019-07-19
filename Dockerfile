@@ -36,7 +36,7 @@ RUN cd /openvino/ && \
 
 RUN git clone https://github.com/jeffbass/imagezmq.git
 
-RUN pip3 install numpy opencv-python
+RUN pip3 install numpy opencv-python jupyter
 
 # installing OpenVINO itself
 RUN cd /openvino/ && \
@@ -61,6 +61,9 @@ RUN mkdir /OpenVinoApps
 
 COPY ./OpenVinoApps/* /OpenVinoApps/
 
-EXPOSE 5000 6000
+EXPOSE 5000 6000 8888
 
-CMD ["python3", "/OpenVinoApps/face_detection_flask.py"]
+#CMD ["python3", "/OpenVinoApps/face_detection_flask.py"]
+
+RUN echo "python3 /OpenVinoApps/face_detection_flask.py" >> ./opt/intel/computer_vision_sdk/bin/setupvars.sh
+ENTRYPOINT ["./opt/intel/computer_vision_sdk/bin/setupvars.sh"]
